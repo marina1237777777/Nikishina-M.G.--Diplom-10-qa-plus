@@ -3,9 +3,10 @@
 SELECT cur.login,
 COUNT(*)
 FROM "Couriers" as cur
-LEFT JOIN "Orders" as ord ON cur.Id = ord."courierId"
+JOIN "Orders" as ord ON cur.Id = ord."courierId"
 WHERE ord."inDelivery" = true
 GROUP BY cur.login;
+
 
 
 Задание 2
